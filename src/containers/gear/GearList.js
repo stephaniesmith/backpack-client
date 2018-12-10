@@ -1,25 +1,14 @@
 import { connect } from 'react-redux';
-import { getGear } from '../../services/gear';
+import { fetchGear } from '../../actions/gear';
+import { getGear } from '../../selector/gear';
 import GearList from '../../components/gear/GearList';
 
-
 const mapStateToProps = state => ({
-  list: [{
-    name: 'R1',
-    brand: 'Patagonia',
-    type: 'clothes',
-    weight: 5
-  },
-  {
-    name: 'Lone Peak 3.5',
-    brand: 'Altras',
-    type: 'shoes',
-    weight: 4.5
-  }]
+  list: getGear(state)
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetch: () => dispatch(getGear())
+  fetch: () => dispatch(fetchGear())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(GearList);

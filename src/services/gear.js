@@ -1,3 +1,3 @@
 import { get } from './request';
 
-export const getGear = () => get('/api/gear');
+export const fetchGear = () => get('/api/gear');

@@ -1,1 +1,1 @@
-export const getGear = state => state.gear;
+export const getGear = state => state.gear.list;

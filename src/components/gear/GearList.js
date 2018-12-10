@@ -7,8 +7,12 @@ export default class GearList extends PureComponent {
     fetch: PropTypes.func.isRequired
   };
 
+  componentDidMount() {
+    this.props.fetch();
+  }
+
   render() {
-    const { list } = this .props;
+    const { list } = this.props;
 
     return (
       <div>

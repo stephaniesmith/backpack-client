@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import { fetchGear } from '../../services/gear';
-import { getGear } from '../../selector/gear'
+import { fetchGear } from '../../actions/gear';
+import { getGear } from '../../selector/gear';
 import GearList from '../../components/gear/GearList';
 
 const mapStateToProps = state => ({
